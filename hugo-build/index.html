@@ -1,0 +1,244 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title class=pjax-title>简单易上手！非程序猿带你搭建免费个人博客 - 张小鱼的储物间</title><meta name=Description content="无需服务器，适合不懂代码的小白，基于 Hugo + DoIt + GitHub 一键生成个人博客。"><meta property="og:title" content="简单易上手！非程序猿带你搭建免费个人博客"><meta property="og:description" content="无需服务器，适合不懂代码的小白，基于 Hugo + DoIt + GitHub 一键生成个人博客。"><meta property="og:type" content="article"><meta property="og:url" content="https://zyyjade.github.io/blog/hugo-build/"><meta property="og:image" content="https://zyyjade.github.io/blog/hugo-build/cover.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-11-06T23:50:38+08:00"><meta property="article:modified_time" content="2022-11-06T23:50:38+08:00"><meta property="og:site_name" content="张小鱼的储物间"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://zyyjade.github.io/blog/hugo-build/cover.png"><meta name=twitter:title content="简单易上手！非程序猿带你搭建免费个人博客"><meta name=twitter:description content="无需服务器，适合不懂代码的小白，基于 Hugo + DoIt + GitHub 一键生成个人博客。"><meta name=application-name content="张小鱼的储物间"><meta name=apple-mobile-web-app-title content="张小鱼的储物间"><meta name=theme-color content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel=icon href=/favicon.svg><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://zyyjade.github.io/blog/hugo-build/><link rel=prev href=https://zyyjade.github.io/blog/hugo-shortcode/><link rel=stylesheet href=/blog/lib/normalize/normalize.min.css><link rel=stylesheet href=/blog/css/style.min.css><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/blog/lib/fontawesome-free/all.min.css><noscript><link rel=stylesheet href=/blog/lib/fontawesome-free/all.min.css></noscript><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/blog/lib/animate/animate.min.css><noscript><link rel=stylesheet href=/blog/lib/animate/animate.min.css></noscript><meta name=google-site-verification content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"简单易上手！非程序猿带你搭建免费个人博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/zyyjade.github.io\/blog\/hugo-build\/"},"image":[{"@type":"ImageObject","url":"https:\/\/zyyjade.github.io\/blog\/avatar.jpg","width":686,"height":686}],"genre":"posts","keywords":"Hugo, DoIt, GitHub","wordcount":3888,"url":"https:\/\/zyyjade.github.io\/blog\/hugo-build\/","datePublished":"2022-11-06T23:50:38+08:00","dateModified":"2022-11-06T23:50:38+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"张小鱼","logo":{"@type":"ImageObject","url":"https:\/\/zyyjade.github.io\/blog\/avatar.jpg","width":686,"height":686}},"author":{"@type":"Person","name":"张小鱼"},"description":"无需服务器，适合不懂代码的小白，基于 Hugo + DoIt + GitHub 一键生成个人博客。"}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>function setTheme(e){document.body.setAttribute("theme",e),document.documentElement.style.setProperty("color-scheme",e==="light"?"light":"dark")}function saveTheme(e){window.localStorage&&localStorage.setItem("theme",e)}function getMeta(e){const t=document.getElementsByTagName("meta");for(let n=0;n<t.length;n++)if(t[n].getAttribute("name")===e)return t[n];return""}if(window.localStorage&&localStorage.getItem("theme")){let e=localStorage.getItem("theme");e==="light"||e==="dark"||e==="black"?setTheme(e):setTheme(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}else"auto"==="light"||"auto"==="dark"||"auto"==="black"?(setTheme("auto"),saveTheme("auto")):(saveTheme("auto"),setTheme(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));let metaColors={light:"#f8f8f8",dark:"#252627",black:"#000000"};getMeta("theme-color").content=metaColors[document.body.getAttribute("theme")]</script><div id=back-to-top></div><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/blog/ title=张小鱼的储物间><img class="lazyload logo" data-src=/favicon.ico data-srcset="/favicon.ico, /favicon.ico 1.5x, /favicon.ico 2x" data-sizes=auto alt=/favicon.ico title=/favicon.ico> 张小鱼的储物间</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/blog/posts/><i class='fa fa-archive' aria-hidden=true></i> 文章 </a><a class=menu-item href=/blog/categories/><i class='fa fa-th' aria-hidden=true></i> 分类 </a><a class=menu-item href=/blog/tags/><i class='fa fa-tags' aria-hidden=true></i> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=# onclick=return!1 class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw"></i></a>
+<a href=# onclick=return!1 class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw"></i></a>
+<span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span>
+</span><a href=# onclick=return!1 class="menu-item theme-switch" title=切换主题><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/blog/ title=张小鱼的储物间><img class="lazyload logo" data-src=/favicon.ico data-srcset="/favicon.ico, /favicon.ico 1.5x, /favicon.ico 2x" data-sizes=auto alt=/favicon.ico title=/favicon.ico> 张小鱼的储物间</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=# onclick=return!1 class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fas fa-search fa-fw"></i></a>
+<a href=# onclick=return!1 class="search-button search-clear" id=search-clear-mobile title=清空><i class="fas fa-times-circle fa-fw"></i></a>
+<span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=# onclick=return!1 class=search-cancel id=search-cancel-mobile>取消</a></div><a class=menu-item href=/blog/posts/ title><i class='fa fa-archive' aria-hidden=true></i>文章</a><a class=menu-item href=/blog/categories/ title><i class='fa fa-th' aria-hidden=true></i>分类</a><a class=menu-item href=/blog/tags/ title><i class='fa fa-tags' aria-hidden=true></i>标签</a><a href=# onclick=return!1 class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class=toc-content id=toc-content-auto><nav id=TableOfContents><ul><li><a href=#安装工具>安装工具</a></li><li><a href=#创建网站>创建网站</a></li><li><a href=#主题配置>主题配置</a></li><li><a href=#发表文章>发表文章</a></li><li><a href=#部署博客>部署博客</a><ul><li><a href=#注册账号>注册账号</a></li><li><a href=#生成网站>生成网站</a></li><li><a href=#命令部署>命令部署</a></li><li><a href=#软件部署>软件部署</a></li></ul></li><li><a href=#参考内容>参考内容</a></li></ul></nav></div></div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle","normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC","true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">简单易上手！非程序猿带你搭建免费个人博客</h1><div class=post-meta><div class=post-meta-line><span class=post-author><span class=post-author><a href=https:/zyyjade.github.io title=作者 rel=author class=author><img class="lazyload avatar" data-src=/avatar.jpg data-srcset="/blog/avatar.jpg, /avatar.jpg 1.5x, /blog/avatar.jpg 2x" data-sizes=auto alt=张小鱼 title=张小鱼>&nbsp;张小鱼</a></span>
+</span>&nbsp;<span class=post-category>收录于 </span>&nbsp;<span class=post-category>类别 <a href=/blog/categories/%E5%BC%80%E5%8F%91/><i class="far fa-folder fa-fw"></i>开发</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2022-11-06>2022-11-06</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime=2022-11-06>2022-11-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3888 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id=/blog/hugo-build/ class=leancloud_visitors data-flag-title=简单易上手！非程序猿带你搭建免费个人博客>
+<i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count id=twikoo_visitors></span>&nbsp;次阅读
+</span>&nbsp;<span id=/blog/hugo-build/ class=comment_count data-flag-title=简单易上手！非程序猿带你搭建免费个人博客>
+<i class="far fa-comments fa-fw"></i>&nbsp;<span class=twikoo-comment-count id=twikoo-comment-count></span>&nbsp;条评论
+</span>&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#安装工具>安装工具</a></li><li><a href=#创建网站>创建网站</a></li><li><a href=#主题配置>主题配置</a></li><li><a href=#发表文章>发表文章</a></li><li><a href=#部署博客>部署博客</a><ul><li><a href=#注册账号>注册账号</a></li><li><a href=#生成网站>生成网站</a></li><li><a href=#命令部署>命令部署</a></li><li><a href=#软件部署>软件部署</a></li></ul></li><li><a href=#参考内容>参考内容</a></li></ul></nav></div></div><div class=content id=content><p>有人可能会问，你为什么要自己搭建博客？明明有公众号、简书、知乎那么多的平台，何必折腾呢？</p><p>在回答这个问题之前，我希望你可以回想一下当遇到一些问题时，是不是会下意识地打开百度？然后过了很长一段时间，当你再碰到类似的问题，你是不是又打开百度再搜索？如此循环往复，时间和精力都被浪费掉了。</p><p>但是，如果我拥有自己的知识库，将遇到过的问题记录下来，那么下次再遇到的时候，我只要搜索一下，不就能立刻得到我想要的答案了嘛！😋😋😋</p><p>所以，我希望的是能够建立自己个人的知识库，它具有我想要的功能，可以最大限度地自定义我的内容，而自建博客网站恰好是实现这一目的的方式。</p><p>搭建博客难吗？说难也难，因为你正在接触一件新事物，人们容易对新事物产生不适感。说容易也很容易，不会代码，不是程序员，只要会下载软件和打字，跟着下面的步骤，你就能自己搭建一个静态博客。</p><h2 id=安装工具 class=headerLink><a href=#%e5%ae%89%e8%a3%85%e5%b7%a5%e5%85%b7 class=header-mark></a>安装工具</h2><p>静态网站非常适合专注于内容的网站，通过静态网站生成器，你可以很简单地构建一个静态博客。常见的静态网站生成器有 <a href=https://hexo.io/zh-cn/ target=_blank rel="noopener noreferrer">Hexo</a>、<a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a>、<a href=http://jekyllrb.com/ target=_blank rel="noopener noreferrer">Jekyll</a> 等，本文以 Hugo 进行操作。</p><p><a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a> 是 Go 编写的静态网站生成器，速度快，易用，可配置，只需要几分之一秒就可以渲染一个经典的中型网站，非常适合博客，文档等网站的生成。</p><p>在开始搭建网站之前，建议安装 <a href=https://git-scm.com/ target=_blank rel="noopener noreferrer">Git 工具</a>，它是一个版本管理控制系统软件，可以记录代码修改的每一个环节，就好比我们玩游戏存档。如果你打不开前面的链接，你还可以下载<a href=https://npm.taobao.org/mirrors/git-for-windows/v2.22.0.windows.1/Git-2.22.0-64-bit.exe target=_blank rel="noopener noreferrer">国内镜像</a>版本。</p><p>Hugo 的安装非常简单，只需要前往 <a href=https://github.com/gohugoio/hugo/releases target=_blank rel="noopener noreferrer">Hugo Releases</a> 下载你所使用的操作系统的最新版本的二进制文件即可，推荐下载 <code>Hugo Extended</code> 版本，因为部分主题的一些特性需要将 SCSS 转换为 CSS，使用该版本将获得更好的体验。下面的操作步骤以 Windows 10 64bit 为例。</p><p><a class=lightgallery href=/blog/hugo-build/hugo.png title=下载hugo data-thumbnail=/blog/hugo-build/hugo.png><img class=lazyload data-src=hugo.png data-srcset="/blog/hugo-build/hugo.png, hugo.png 1.5x, /blog/hugo-build/hugo.png 2x" data-sizes=auto alt=/blog/hugo-build/hugo.png></a></p><p>接着新建一个「 hugo 」文件夹，在它下面再新建「 bin 」文件夹，然后将下载的文件解压到新建的「 bin 」文件夹中。</p><p><a class=lightgallery href=/blog/hugo-build/bin.png title=新建bin文件夹 data-thumbnail=/blog/hugo-build/bin.png><img class=lazyload data-src=bin.png data-srcset="/blog/hugo-build/bin.png, bin.png 1.5x, /blog/hugo-build/bin.png 2x" data-sizes=auto alt=/blog/hugo-build/bin.png></a></p><p>同时还要将 Hugo 添加到环境变量中，如果缺少这一步，Hugo 将无法运行。</p><p><a class=lightgallery href=/blog/hugo-build/path.png title=环境变量 data-thumbnail=/blog/hugo-build/path.png><img class=lazyload data-src=path.png data-srcset="/blog/hugo-build/path.png, path.png 1.5x, /blog/hugo-build/path.png 2x" data-sizes=auto alt=/blog/hugo-build/path.png></a></p><p><a class=lightgallery href=/blog/hugo-build/path2.png title=编辑环境变量 data-thumbnail=/blog/hugo-build/path2.png><img class=lazyload data-src=path2.png data-srcset="/blog/hugo-build/path2.png, path2.png 1.5x, /blog/hugo-build/path2.png 2x" data-sizes=auto alt=/blog/hugo-build/path2.png></a></p><blockquote><p>环境变量位于右键单击「 我的电脑 -> 属性 -> 高级 -> 环境变量 」，或者按住 <code>win+R</code> 进入设置，选择「 系统 -> 关于 -> 高级系统设置 -> 高级 -> 环境变量 」。</p></blockquote><p>最后，你可以按住 <code>win+R</code>，输入 <code>cmd</code> ，进入命令提示符页面，输入 <code>hugo version</code> 即可验证是否成功。如果出现版本号，说明环境变量配置成功。</p><h2 id=创建网站 class=headerLink><a href=#%e5%88%9b%e5%bb%ba%e7%bd%91%e7%ab%99 class=header-mark></a>创建网站</h2><p>前一步完成后，我们打开刚刚新建的「 Hugo 」文件夹，然后在空白处右键单击 <code>Git Bash Here</code> ，并输入以下命令：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo new site blog
+</span></span></code></pre></td></tr></table></div></div><p><a class=lightgallery href=/blog/hugo-build/new.png title=new data-thumbnail=/blog/hugo-build/new.png><img class=lazyload data-src=new.png data-srcset="/blog/hugo-build/new.png, new.png 1.5x, /blog/hugo-build/new.png 2x" data-sizes=auto alt=/blog/hugo-build/new.png></a></p><p>以上命令将会创建一个名为「 blog 」的文件夹，该文件夹存储着你的博客站点数据，你可以将 blog 改为其它单词，创建属于自己的站点，这也是 Hugo 的根目录。</p><h2 id=主题配置 class=headerLink><a href=#%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae class=header-mark></a>主题配置</h2><p>主题是什么？你可以理解为网页的设计，就像我们穿衣服一样，你需要给你的博客打扮打扮，你可以前往 <a href=https://themes.gohugo.io/ target=_blank rel="noopener noreferrer">Hugo 主题网站</a>选择你喜欢的主题。下面以 <a href=https://hugodoit.pages.dev/zh-cn/ target=_blank rel="noopener noreferrer">DoIt</a> 主题进行说明。</p><p>在 Hugo 根目录，右键单击 <code>Git Bash Here</code> ，依次输入以下命令：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git init
+</span></span><span class=line><span class=cl>git submodule add https://github.com/HEIGE-PCloud/DoIt.git themes/DoIt
+</span></span></code></pre></td></tr></table></div></div><p>☕☕☕ 等待几分钟，主题就安装完成啦~ (～￣▽￣)～</p><p>接着将 <code>...\themes\DoIt\exampleSite</code>内的 <code>config.toml</code> 复制到 Hugo 根目录，覆盖掉原先的 <code>config.toml</code>，并打开复制后的文件，将 <code>themesDir = "../.."</code> 更改为 <code>themesDir = "themes"</code>。</p><p>然后在 Hugo 根目录，右键单击 <code>Git Bash Here</code> ，输入以下任一命令，就可以进入<a href=http://localhost:1313 target=_blank rel="noopener noreferrer">本地服务器</a>预览你的网页了。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo server               <span class=c1># 本地预览命令</span>
+</span></span><span class=line><span class=cl>hugo server -D            <span class=c1># 支持预览草稿的本地预览命令</span>
+</span></span><span class=line><span class=cl>hugo serve -e production  <span class=c1># 支持启用评论系统和CDN等的本地预览命令</span>
+</span></span></code></pre></td></tr></table></div></div><p>由于 Hugo 支持实时预览修改，即可以一边主题配置文件，一边在网页预览效果，所以你可以开启本地预览命令，参照 <a href=https://hugodoit.pages.dev/zh-cn/theme-documentation-basics/ target=_blank rel="noopener noreferrer">DoIt 主题使用文档</a>配置你自己的网页。</p><p>配置主题相当于开启和关闭功能，就好像我们日常使用的 APP，里面有很多功能，但并不是所有的功能你都需要，你可以结合自己的需求有选择地在主页面开启和隐藏某些功能，你只要打开刚刚复制的 <code>config.toml</code>修改即可。</p><h2 id=发表文章 class=headerLink><a href=#%e5%8f%91%e8%a1%a8%e6%96%87%e7%ab%a0 class=header-mark></a>发表文章</h2><p>在发表文章之前，我们需要了解一下<code>Front matter</code> ，它最直观的体现为 Markdown 文件最上方以 <code>---</code> 分隔的区域，用于指定网页页面的属性（变量），如标题、发布时间、分类、标签等。</p><p>你可以选取所需要的参数，对 <code>Front matter</code>进行修改，这样当我们创建页面的时候，就不需要逐一增设参数，而只需填写变量内容即可。</p><p><a class=lightgallery href=/blog/hugo-build/image-20221107011312929.png title=前置参数 data-thumbnail=/blog/hugo-build/image-20221107011312929.png><img class=lazyload data-src=image-20221107011312929.png data-srcset="/blog/hugo-build/image-20221107011312929.png, image-20221107011312929.png 1.5x, /blog/hugo-build/image-20221107011312929.png 2x" data-sizes=auto alt=/blog/hugo-build/image-20221107011312929.png></a></p><p>打开 Hugo 根目录下的 <code>...\archetypes\default.md</code>，结合自己的需求修改内容，以下是 DoIt 主题的 <code>Front Matter</code>，提供给大家参考：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>---
+</span></span><span class=line><span class=cl>title: &#34;我的第一篇文章&#34;
+</span></span><span class=line><span class=cl>subtitle: &#34;&#34;
+</span></span><span class=line><span class=cl>date: 2020-03-04T15:58:26+08:00
+</span></span><span class=line><span class=cl>lastmod: 2020-03-04T15:58:26+08:00
+</span></span><span class=line><span class=cl>draft: true
+</span></span><span class=line><span class=cl>authors: []
+</span></span><span class=line><span class=cl>description: &#34;&#34;
+</span></span><span class=line><span class=cl>license: &#34;&#34;
+</span></span><span class=line><span class=cl>images: []
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>tags: []
+</span></span><span class=line><span class=cl>categories: []
+</span></span><span class=line><span class=cl>series: []
+</span></span><span class=line><span class=cl>series_weight: 1
+</span></span><span class=line><span class=cl>seriesNavigation: true
+</span></span><span class=line><span class=cl>featuredImage: &#34;&#34;
+</span></span><span class=line><span class=cl>featuredImagePreview:: &#34;&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>hiddenFromHomePage: false
+</span></span><span class=line><span class=cl>hiddenFromSearch: false
+</span></span><span class=line><span class=cl>twemoji: false
+</span></span><span class=line><span class=cl>lightgallery: true
+</span></span><span class=line><span class=cl>ruby: true
+</span></span><span class=line><span class=cl>fraction: true
+</span></span><span class=line><span class=cl>fontawesome: true
+</span></span><span class=line><span class=cl>linkToMarkdown: true
+</span></span><span class=line><span class=cl>linkToSource: false
+</span></span><span class=line><span class=cl>linkToEdit: false
+</span></span><span class=line><span class=cl>linkToReport: false
+</span></span><span class=line><span class=cl>rssFullText: false
+</span></span><span class=line><span class=cl>license: &#39;&#39;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>toc:
+</span></span><span class=line><span class=cl>  enable: true
+</span></span><span class=line><span class=cl>  auto: true
+</span></span><span class=line><span class=cl>code:
+</span></span><span class=line><span class=cl>  copy: true
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>table:
+</span></span><span class=line><span class=cl>  sort: true
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>math:
+</span></span><span class=line><span class=cl>  enable: true
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>mapbox:
+</span></span><span class=line><span class=cl>  accessToken: &#34;&#34;
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>share:
+</span></span><span class=line><span class=cl>  enable: true
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>comment:
+</span></span><span class=line><span class=cl>  enable: true
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>library:
+</span></span><span class=line><span class=cl>  css:
+</span></span><span class=line><span class=cl>    # someCSS = &#34;some.css&#34;
+</span></span><span class=line><span class=cl>    # 位于 &#34;assets/&#34;
+</span></span><span class=line><span class=cl>    # 或者
+</span></span><span class=line><span class=cl>    # someCSS = &#34;https://cdn.example.com/some.css&#34;
+</span></span><span class=line><span class=cl>  js:
+</span></span><span class=line><span class=cl>    # someJS = &#34;some.js&#34;
+</span></span><span class=line><span class=cl>    # 位于 &#34;assets/&#34;
+</span></span><span class=line><span class=cl>    # 或者
+</span></span><span class=line><span class=cl>    # someJS = &#34;https://cdn.example.com/some.js&#34;
+</span></span><span class=line><span class=cl>seo:
+</span></span><span class=line><span class=cl>  images: []
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>outdatedArticleReminder:
+</span></span><span class=line><span class=cl>  enable: false
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>sponsor:
+</span></span><span class=line><span class=cl>  enable: false
+</span></span><span class=line><span class=cl>  # ...
+</span></span><span class=line><span class=cl>related:
+</span></span><span class=line><span class=cl>  enable: false
+</span></span><span class=line><span class=cl>  count: 5
+</span></span><span class=line><span class=cl>---
+</span></span></code></pre></td></tr></table></div></div><p>然后就可以开始发布文章啦，在 Hugo 根目录右键单击 <code>Git Bash Here</code> ，依次输入以下任一命令：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo new posts/first/index.md
+</span></span><span class=line><span class=cl>hugo new posts/first.md
+</span></span></code></pre></td></tr></table></div></div><p>这两条命令的区别在于，前者创建了一个页面资源包，通过修改 Typora 图像的偏好设置，可以直接将本地图片复制到该文件夹，并引用其相对路径。后者则是直接创建一个 <code>posts</code> 页面，图片可以根据自己的需求放在「 assets 」或「 static 」文件夹，引用其相对路径，或直接上传到图床，引用其绝对路径。</p><p>需要注意的是，图片的命名必须取英文字符，如 <code>pic.png</code>，如果命名为中文字符或有空格，图片将无法正常显示，如<code>图片.png</code>。</p><h2 id=部署博客 class=headerLink><a href=#%e9%83%a8%e7%bd%b2%e5%8d%9a%e5%ae%a2 class=header-mark></a>部署博客</h2><h3 id=注册账号 class=headerLink><a href=#%e6%b3%a8%e5%86%8c%e8%b4%a6%e5%8f%b7 class=header-mark></a>注册账号</h3><p>Are you ready？你准备把你做好的网页发给你朋友看了吗？如果你准备好了，就开始吧！</p><p>首先，你需要有一个 <a href=https://github.com/ target=_blank rel="noopener noreferrer">GitHub</a> 账号，如果你有，就需要登录并创建一个新的仓库；如果你没有，就跟着下面的步骤来操作吧。</p><table><thead><tr><th style=text-align:center>步骤</th><th>内容</th><th>要点</th></tr></thead><tbody><tr><td style=text-align:center>1</td><td>账号注册/登录</td><td>未注册：进入<a href=https://github.com/ target=_blank rel="noopener noreferrer">官网</a>，点击 <code>Sign up</code> ，根据提示注册账号；<br>已注册：点击右上角的 <code>Sign in</code> ，登录 GitHub 。</td></tr><tr><td style=text-align:center>2</td><td>创建新仓库</td><td>点击头像，选择 <code>Your repositories</code> 进入仓库；<br>点击绿色按钮 <code>New</code> 新建仓库；<br>填写 <code>Repository name *</code> ;<br>勾选 <code>Add a README file</code> ；<br>点击绿色按钮 <code>Create Repository</code> 创建新仓库。</td></tr></tbody></table><p>关于 <code>Repository name *</code>，GitHub 默认提供 <code>.github.io</code> 域名给用户使用，且具有唯一性。如果你想生成的是主域名，如 <a href=https://owner.github.io target=_blank rel="noopener noreferrer">https://owner.github.io</a>，则填写 <code>owner.github.io</code>，其中 <code>owner</code> 是你注册时的用户名。如果你想生成的是子域名，如 <a href=https://owner.github.io/blog target=_blank rel="noopener noreferrer">https://owner.github.io/blog</a>，则填写 <code>blog</code> 即可，同时记得修改 Hugo 配置文件。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># 主域名</span>
+</span></span><span class=line><span class=cl><span class=nx>baseURL</span> <span class=p>=</span> <span class=s2>&#34;https://owner.github.io/&#34;</span>
+</span></span><span class=line><span class=cl><span class=c># 子域名</span>
+</span></span><span class=line><span class=cl><span class=nx>baseURL</span> <span class=p>=</span> <span class=s2>&#34;https://owner.github.io/blog&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>仓库名可进入仓库的「 Setting -> General -> Repository name -> Rename 」修改。</p><h3 id=生成网站 class=headerLink><a href=#%e7%94%9f%e6%88%90%e7%bd%91%e7%ab%99 class=header-mark></a>生成网站</h3><p>一般而言，Hugo 在部署到 GitHub 之前需要先生成静态网站文件，然后再将生成的静态网站文件「 Public 」上传到 GitHub 仓库。</p><p>在 Hugo 根目录，右键单击 <code>Git bash here</code>，输入以下任一命令构建网站：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo 
+</span></span><span class=line><span class=cl>hugo -F --cleanDestinationDir
+</span></span></code></pre></td></tr></table></div></div><p><code>hugo</code> 会在 「 public 」文件夹生成静态网站资源，如果下次网站有修改，需要删除该文件夹，再重新执行该命令，因为该命令只会往里面添加内容，不会删除外部已删除而「 public 」仍存在的文件。</p><p><code>hugo -F --cleanDestinationDir</code> 则会从静态目录中找不到的目标中删除文件，表示每次生成的「 public 」都是全新的，会覆盖原来的。</p><p>关于部署到 GitHub 的方式，如果你想一劳永逸，可以使用 <a href=https://desktop.github.com/ target=_blank rel="noopener noreferrer">GitHub 桌面版</a>直接上传本地网站代码到 GitHub 仓库，阅读「 软件部署 」部分即可。如果不想再下载多一个软件占用本地空间，可以拉到「 命令部署 」部分进行操作。</p><h3 id=命令部署 class=headerLink><a href=#%e5%91%bd%e4%bb%a4%e9%83%a8%e7%bd%b2 class=header-mark></a>命令部署</h3><p>我们要通过 Git 将本地网站代码传输到 GitHub 仓库，需要利用到 GitHub 仓库的 Git 地址。Git 地址有两种形式，一种是 HTTPS 地址，如 <code>https://github.com/owner/repo.git</code>，另一种是 SSL 地址，如 <code>git@github.com:owner/repo.git</code>。</p><p><a class=lightgallery href=/blog/hugo-build/et2e5qc8ov.png title=et2e5qc8ov data-thumbnail=/blog/hugo-build/et2e5qc8ov.png><img class=lazyload data-src=et2e5qc8ov.png data-srcset="/blog/hugo-build/et2e5qc8ov.png, et2e5qc8ov.png 1.5x, /blog/hugo-build/et2e5qc8ov.png 2x" data-sizes=auto alt=/blog/hugo-build/et2e5qc8ov.png></a></p><p>由于 GitHub 的特性，使用 HTTPS 地址，你每次通过 Git 提交的时候，都需要输入用户名和用户密码，而使用 SSL 地址则无需这样繁琐的操作。如果你使用的是 HTTPS 地址，则在 Hugo 根目录执行以下命令。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> public
+</span></span><span class=line><span class=cl>git init
+</span></span><span class=line><span class=cl>git add .
+</span></span><span class=line><span class=cl>git commit -m <span class=s2>&#34;message&#34;</span>
+</span></span><span class=line><span class=cl>git branch -M main 
+</span></span><span class=line><span class=cl>git remote add origin https://github.com/owner/repo.git
+</span></span><span class=line><span class=cl>git push -u origin main
+</span></span></code></pre></td></tr></table></div></div><p>如果你使用的是 SSH 地址，则需要按如下步骤获取你的密钥。首先，在桌面右键选择 <code>Git Bash here</code>，执行以下命令，自行替换引号内的相应字段。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git config --global user.name <span class=s2>&#34;注册时的用户名&#34;</span>
+</span></span><span class=line><span class=cl>git config --global user.email  <span class=s2>&#34;注册时的用户邮箱号&#34;</span>
+</span></span><span class=line><span class=cl>ssh-keygen -t rsa -C <span class=s2>&#34;注册时的用户邮箱号&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>此时会询问是否需要密码，不需要直接继续按三次回车即可，然后可以执行以下命令，获取你生成的密钥。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> ~/.ssh
+</span></span><span class=line><span class=cl>cat id_rsa.pub
+</span></span></code></pre></td></tr></table></div></div><p>鼠标选中后右键选择 <code>Copy</code> ，回到 GitHub 的页面，点击「 头像 -> Settings -> SSH and GPG keys -> New SSH key 」，将复制的内容粘贴到 Key 位置。</p><p><a class=lightgallery href=/blog/hugo-build/SSH-keys.png title=SSH-keys data-thumbnail=/blog/hugo-build/SSH-keys.png><img class=lazyload data-src=SSH-keys.png data-srcset="/blog/hugo-build/SSH-keys.png, SSH-keys.png 1.5x, /blog/hugo-build/SSH-keys.png 2x" data-sizes=auto alt=/blog/hugo-build/SSH-keys.png></a></p><p>配置完成后，你可以通过 <code>ssh -T git@github.com</code> 测试是否成功配置 SSH Key。然后回到 Hugo 根目录，右键单击 <code>Git bash here</code>，执行以下命令部署网站。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> public
+</span></span><span class=line><span class=cl>git init
+</span></span><span class=line><span class=cl>git add .
+</span></span><span class=line><span class=cl>git commit -m <span class=s2>&#34;message&#34;</span>
+</span></span><span class=line><span class=cl>git branch -M main 
+</span></span><span class=line><span class=cl>git remote add origin git@github.com:owner/repo.git
+</span></span><span class=line><span class=cl>git push -u origin main
+</span></span></code></pre></td></tr></table></div></div><p>接下来进入仓库，点击「 Settings -> Pages -> GitHub Pages 」，就可以复制你的域名分享给朋友啦！👏👏👏</p><p>如果你没有看到 GitHub Pages 有地址，你需要在 Branch 选择 main ，然后点保存，稍等片刻后刷新就会出现。</p><h3 id=软件部署 class=headerLink><a href=#%e8%bd%af%e4%bb%b6%e9%83%a8%e7%bd%b2 class=header-mark></a>软件部署</h3><p><a href=https://desktop.github.com/ target=_blank rel="noopener noreferrer">GitHub 桌面版</a>的操作很傻瓜式，直接复制粘贴替换即可，不需要记很多命令，也不需要申请 SSH 密钥等一系列操作，缺点就是会占用本地空间。</p><p>下载安装后，进入页面登录后选择 <code>Clone a repository</code>，选择刚刚新建的仓库，选择 <code>Local Path</code> 用于放置博客 <code>public</code> 的内容。</p><p><a class=lightgallery href=/blog/hugo-build/clone.png title=clone data-thumbnail=/blog/hugo-build/clone.png><img class=lazyload data-src=clone.png data-srcset="/blog/hugo-build/clone.png, clone.png 1.5x, /blog/hugo-build/clone.png 2x" data-sizes=auto alt=/blog/hugo-build/clone.png></a></p><p>接着，将 Hugo 根目录下的「 Public 」中的所有内容复制到刚刚的 <code>Local Path</code> 中，它就会自动出现在 GitHub 桌面版的界面中，然后按照下图指示操作就会自动部署到 GitHub 仓库中。</p><p><a class=lightgallery href=/blog/hugo-build/fetch.png title=fetch data-thumbnail=/blog/hugo-build/fetch.png><img class=lazyload data-src=fetch.png data-srcset="/blog/hugo-build/fetch.png, fetch.png 1.5x, /blog/hugo-build/fetch.png 2x" data-sizes=auto alt=/blog/hugo-build/fetch.png></a></p><p>最后我们回到 GitHub 仓库界面，选择「 Setting -> Pages 」就可以获取我们的域名啦，并且可以发送给朋友看啦！👏👏👏</p><p>💡 TIP：每次构建网站前，建议把「 Public 」整个文件夹删掉，然后再执行 <code>Hugo</code> 命令，不然可能会出现 Bug；或直接执行 <code>hugo -F --cleanDestinationDir</code> 命令，无需删除该文件夹。</p><h2 id=参考内容 class=headerLink><a href=#%e5%8f%82%e8%80%83%e5%86%85%e5%ae%b9 class=header-mark></a>参考内容</h2><ul><li><a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo 文档</a></li><li><a href=https://hugodoit.pages.dev/zh-cn/theme-documentation-basics/ target=_blank rel="noopener noreferrer">DoIt 主题文档</a></li></ul></div><h2>相关内容</h2><div class=related-container><div class=related-item-container><div class=related-image><a href=/blog/hugo-shortcode/><img class=lazyload data-src=/blog/hugo-shortcode/cover.png data-srcset="/blog/hugo-shortcode/cover.png, /blog/hugo-shortcode/cover.png 1.5x, /blog/hugo-shortcode/cover.png 2x" data-sizes=auto alt=/blog/hugo-shortcode/cover.png title="无需服务器，适合不懂代码的小白，基于 Hugo + DoIt + GitHub 一键生成个人博客。" height=200 width=400></a></div><h2 class=related-title><a href=/blog/hugo-shortcode/>速查！Hugo Shortcodes 语法手册</a></h2></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2022-11-06</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=# onclick=return!1 title="分享到 微博" data-sharer=weibo data-url=https://zyyjade.github.io/blog/hugo-build/ data-title=简单易上手！非程序猿带你搭建免费个人博客><i class="fab fa-weibo fa-fw"></i></a><a href=# onclick=return!1 title="分享到 人人" data-sharer=renren data-url=https://zyyjade.github.io/blog/hugo-build/><i class="fab fa-renren fa-fw"></i></a><a href=# onclick=return!1 title="分享到 百度" data-sharer=baidu data-url=https://zyyjade.github.io/blog/hugo-build/ data-title=简单易上手！非程序猿带你搭建免费个人博客><i data-svg-src=/blog/lib/simple-icons/icons/baidu.min.svg></i></a><a href=# onclick=return!1 title="分享到 Evernote" data-sharer=evernote data-url=https://zyyjade.github.io/blog/hugo-build/ data-title=简单易上手！非程序猿带你搭建免费个人博客><i class="fab fa-evernote fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/blog/tags/hugo/>Hugo</a>,&nbsp;<a href=/blog/tags/doit/>DoIt</a>,&nbsp;<a href=/blog/tags/github/>GitHub</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/blog/>主页</a></span></section></div><div class=post-nav><a href=/blog/hugo-shortcode/ class=prev rel=prev title="速查！Hugo Shortcodes 语法手册"><i class="fas fa-angle-left fa-fw"></i>速查！Hugo Shortcodes 语法手册</a></div></div><div id=comments><div id=twikoo></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://twikoo.js.org/>Twikoo</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io>Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/HEIGE-PCloud/DoIt>DoIt</a> & <a href=https://github.com/hugo-fixit/FixIt>FixIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=https:/zyyjade.github.io target=_blank rel="noopener noreferrer">张小鱼</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=http://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div><div class=footer-line></div><div class=footer-line></div></div><script>"serviceWorker"in navigator&&(navigator.serviceWorker.register("/sw.min.js",{scope:"/"}).then(function(){}),navigator.serviceWorker.ready.then(function(){}))</script></footer></div><div id=fixed-buttons><a href=#back-to-top id=back-to-top-button class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><div class=assets><script type=text/javascript src=/blog/lib/autocomplete/autocomplete.min.js></script><script type=text/javascript src=/blog/lib/fuse/fuse.min.js></script><script type=text/javascript src=/blog/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/blog/lib/tablesort/tablesort.min.js></script><script type=text/javascript src=/blog/lib/topbar/topbar.min.js></script><script type=text/javascript src=/blog/lib/pjax/pjax.min.js></script><script type=text/javascript src=/blog/js/theme.min.js defer></script></div><div class=pjax-assets><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{twikoo:{commentCount:!0,el:"#twikoo",envId:"https://twikoo.zyuyu.top/",lang:"zh-cn"}},lightGallery:{actualSize:!1,exThumbImage:"data-thumbnail",hideBarsDelay:2e3,selector:".lightgallery",speed:400,thumbContHeight:80,thumbWidth:80,thumbnail:!0},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},search:{distance:100,findAllMatches:!1,fuseIndexURL:"/blog/index.json",highlightTag:"em",ignoreFieldNorm:!1,ignoreLocation:!0,isCaseSensitive:!1,location:0,maxResultLength:10,minMatchCharLength:2,noResultsFound:"没有找到结果",snippetLength:50,threshold:.1,type:"fuse",useExtendedSearch:!1},sharerjs:!0,table:{sort:!0}}</script><script type=text/javascript src=/blog/lib/twikoo/twikoo.all.min.js defer></script><script type=text/javascript src=/blog/js/twikoo.min.js defer></script><script type=text/javascript src=/blog/lib/lightgallery/lightgallery.min.js></script><script type=text/javascript src=/blog/lib/lightgallery/lg-thumbnail.min.js></script><script type=text/javascript src=/blog/lib/lightgallery/lg-zoom.min.js></script><script type=text/javascript src=/blog/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/blog/lib/sharer/sharer.min.js></script><script type=text/javascript src=/blog/lib/katex/katex.min.js defer></script><script type=text/javascript src=/blog/lib/katex/auto-render.min.js defer></script><script type=text/javascript src=/blog/lib/katex/copy-tex.min.js defer></script><script type=text/javascript src=/blog/lib/katex/mhchem.min.js defer></script><script type=text/javascript src=/blog/js/katex.min.js defer></script><link rel=stylesheet href=/blog/lib/lightgallery/lightgallery.min.css><link rel=stylesheet href=/blog/lib/katex/katex.min.css><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/blog/lib/katex/copy-tex.min.css><noscript><link rel=stylesheet href=/blog/lib/katex/copy-tex.min.css></noscript></div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js></script>
+<script type=text/javascript src=https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js></script><script type=text/javascript src=/js/custom.js></script>
+<script src=https://unpkg.com/vue@2.6.14/dist/vue.min.js></script>
+<script src=https://unpkg.com/element-ui@2.15.6/lib/index.js></script>
+<link rel=stylesheet href=https://unpkg.com/element-ui@2.15.6/packages/theme-chalk/lib/index.css><script type=text/javascript>document.addEventListener("copy",function(){new Vue({data:function(){return this.$notify({title:"嘿！复制成功",message:"若要转载请务必保留原文链接！爱你呦~😘😘😘",position:"bottom-right",offset:50,showClose:!1,type:"success"}),{visible:!1}}})})</script></body></html>
